@@ -1,0 +1,33 @@
+{
+  "name": "employee-team-graphql",
+  "version": "1.0.0",
+  "description": "Employee Team Management GraphQL API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "db:migrate": "node src/migrations/run.js",
+    "db:seed": "node src/migrations/seed.js",
+    "db:setup": "npm run db:migrate && npm run db:seed"
+  },
+  "keywords": [
+    "graphql",
+    "nodejs",
+    "postgresql",
+    "employee",
+    "team"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "dataloader": "^2.2.2",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.8.1",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "node-pg-migrate": "^6.2.2"
+  }
+}
