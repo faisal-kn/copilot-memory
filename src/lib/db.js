@@ -1,19 +1,9 @@
-import pg from "pg";
 import knex from "knex";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-const { Pool } = pg;
-
-export const db = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
-
-// Knex instance for query building
+// Single Knex instance for all database operations
 export const knexDb = knex({
   client: "pg",
   connection: {
@@ -30,8 +20,21 @@ export const knexDb = knex({
   },
 });
 
+// Legacy db interface for backward compatibility
+// Wraps knexDb.raw() to provide db.query() interface
+export const db = {
+  query: async (text, params = []) => {
+    const result = await knexDb.raw(text, params);
+    return { rows: result.rows || result };
+  },
+};
+
+// API version for database schema compatibility
+export const DB_API_VERSION = "v1.0.0";
+
 // Test database connection
-db.query("SELECT NOW()")
+knexDb
+  .raw("SELECT NOW()")
   .then(() => console.log("✅ Database connected successfully"))
   .catch((err) => console.error("❌ Database connection error:", err.message));
 
