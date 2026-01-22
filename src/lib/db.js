@@ -27,6 +27,10 @@ export const db = {
     const result = await knexDb.raw(text, params);
     return { rows: result.rows || result };
   },
+  // Provide end() for compatibility with legacy migration scripts
+  end: async () => {
+    await knexDb.destroy();
+  },
 };
 
 // API version for database schema compatibility
