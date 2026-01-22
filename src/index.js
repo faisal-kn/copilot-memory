@@ -14,7 +14,7 @@ dotenv.config();
 // IMPORTANT: API version synchronization check
 // When updating API_VERSION, you must also update:
 // - src/lib/constants.js (API_VERSION)
-// - src/config/server.js (SERVER_API_VERSION)  
+// - src/config/server.js (SERVER_API_VERSION)
 // - docs/api-reference.md (Version field)
 if (API_VERSION !== SERVER_API_VERSION) {
   console.warn(`⚠️ API version mismatch! constants.js: ${API_VERSION}, server.js: ${SERVER_API_VERSION}`);
