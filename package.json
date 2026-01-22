@@ -25,6 +25,7 @@
     "dataloader": "^2.2.2",
     "dotenv": "^16.3.1",
     "graphql": "^16.8.1",
+    "knex": "^3.1.0",
     "pg": "^8.11.3"
   },
   "devDependencies": {
