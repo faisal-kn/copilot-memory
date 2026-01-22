@@ -22,6 +22,12 @@ export const knexDb = knex({
       rejectUnauthorized: false,
     },
   },
+  pool: {
+    min: 2,
+    max: 10,
+    acquireTimeoutMillis: 30000,
+    idleTimeoutMillis: 30000,
+  },
 });
 
 // Test database connection
