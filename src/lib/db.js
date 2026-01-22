@@ -1,4 +1,5 @@
 import pg from "pg";
+import knex from "knex";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -9,6 +10,17 @@ export const db = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false,
+  },
+});
+
+// Knex instance for query building
+export const knexDb = knex({
+  client: "pg",
+  connection: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
   },
 });
 
