@@ -111,7 +111,7 @@ When changing API versions, update ALL of these:
 
 - Max name length: 100 characters
 - Max description length: 500 characters
-- Pagination: max 100 items per page, default 10
+- Pagination: max 100 items per page, default 20
 
 ## Testing Guidelines
 
