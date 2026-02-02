@@ -2,7 +2,7 @@
 
 ## API Information
 
-**Version:** v1.0.0
+**Version:** v1.1.0
 
 > **Important:** This version must be synchronized with:
 >
@@ -137,6 +137,12 @@ The API returns standard GraphQL errors with the following structure:
 ```
 
 ## Changelog
+
+### v1.1.0
+
+- Version synchronization improvements
+- Added Copilot memory documentation
+- Enhanced API reference documentation
 
 ### v1.0.0
 

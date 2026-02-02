@@ -6,7 +6,7 @@
 // Server API version - must be synchronized with:
 // - src/lib/constants.js (API_VERSION)
 // - docs/api-reference.md (API documentation version)
-export const SERVER_API_VERSION = "v1.0.0";
+export const SERVER_API_VERSION = "v1.1.0";
 
 // Server settings
 export const PORT = process.env.PORT || 4000;
