@@ -12,7 +12,7 @@ The following files MUST have matching version numbers. Any PR that modifies one
 | `src/config/server.js`  | `SERVER_API_VERSION` | v1.1.0  |
 | `docs/api-reference.md` | Version header       | v1.1.0  |
 
-**Automated check exists in `src/index.js` that warns on mismatch.**
+**Ensure there is an automated check (for example, in your server entrypoint such as `src/index.js`) that warns on version mismatches.**
 
 ## Database-to-GraphQL Mapping Pattern
 
