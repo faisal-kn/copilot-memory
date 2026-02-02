@@ -58,11 +58,14 @@ See [docs/api-reference.md](docs/api-reference.md) for full API documentation.
 
 ## Environment Variables
 
-| Variable       | Description                          | Default       |
-| -------------- | ------------------------------------ | ------------- |
-| `PORT`         | Server port                          | `4000`        |
-| `DATABASE_URL` | PostgreSQL connection string         | -             |
-| `NODE_ENV`     | Environment (development/production) | `development` |
+| Variable                   | Description                          | Default       |
+| -------------------------- | ------------------------------------ | ------------- |
+| `HOST`                     | Server host                          | `localhost`   |
+| `PORT`                     | Server port                          | `4000`        |
+| `DATABASE_URL`             | PostgreSQL connection string         | -             |
+| `NODE_ENV`                 | Environment (development/production) | `development` |
+| `RATE_LIMIT_WINDOW_MS`     | Rate limit time window (ms)          | -             |
+| `RATE_LIMIT_MAX_REQUESTS`  | Max requests per rate limit window   | -             |
 
 ## Version Sync
 
