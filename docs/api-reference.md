@@ -138,6 +138,11 @@ The API returns standard GraphQL errors with the following structure:
 
 ## Changelog
 
+### v1.1.0
+
+- Version synchronization across configuration files
+- Updated API version in documentation
+
 ### v1.0.0
 
 - Initial release
