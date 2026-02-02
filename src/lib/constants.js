@@ -6,7 +6,7 @@
 // API version - must be synchronized with:
 // - src/config/server.js (SERVER_API_VERSION)
 // - docs/api-reference.md (API documentation version)
-export const API_VERSION = "v1.0.0";
+export const API_VERSION = "v1.1.0";
 
 // Database schema version
 export const DB_SCHEMA_VERSION = "v1.0.0";

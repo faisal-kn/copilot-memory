@@ -2,7 +2,7 @@
 
 ## API Information
 
-**Version:** v1.0.0
+**Version:** v1.1.0
 
 > **Important:** This version must be synchronized with:
 >
