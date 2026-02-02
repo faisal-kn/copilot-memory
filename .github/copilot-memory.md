@@ -8,9 +8,9 @@ The following files MUST have matching version numbers. Any PR that modifies one
 
 | File                    | Variable             | Current |
 | ----------------------- | -------------------- | ------- |
-| `src/lib/constants.js`  | `API_VERSION`        | v1.0.0  |
-| `src/config/server.js`  | `SERVER_API_VERSION` | v1.0.0  |
-| `docs/api-reference.md` | Version header       | v1.0.0  |
+| `src/lib/constants.js`  | `API_VERSION`        | v1.1.0  |
+| `src/config/server.js`  | `SERVER_API_VERSION` | v1.1.0  |
+| `docs/api-reference.md` | Version header       | v1.1.0  |
 
 **Automated check exists in `src/index.js` that warns on mismatch.**
 
