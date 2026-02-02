@@ -76,7 +76,7 @@ return createPaginationResponse(items, totalCount, paginationParams);
 
 - [ ] Names max 100 characters
 - [ ] Descriptions max 500 characters
-- [ ] Pagination: max 100 items/page, default 10
+- [ ] Pagination: max 100 items/page, default 20
 
 ## Common PR Issues to Watch For
 
