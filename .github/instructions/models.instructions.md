@@ -1,6 +1,6 @@
 ---
 description: "Best practices for implementing model SQL queries/mutations"
-applyTo: '**/models/**/*.js'
+applyTo: "**/models/**/*.js"
 ---
 
 ## Purpose
@@ -17,6 +17,7 @@ Each service must have two model files:
 ## SQL Query Rules
 
 ### Query Structure
+
 - You should use knex's `raw` method to execute raw SQL queries.
 - Always use knex query builder for dynamic queries to prevent SQL injection.
 
@@ -77,13 +78,20 @@ Each service must have two model files:
 
 ## Naming Conventions
 
-| Item            | Convention                         |
-| --------------- | ---------------------------------- |
-| Query object    | `<entity>Queries` (camelCase)      |
-| Mutation object | `<entity>Mutations` (camelCase)    |
-| Query keys      | camelCase describing the operation |
-| Table names     | snake_case, plural                 |
-| Column names    | snake_case                         |
+| Item            | Convention                                    |
+| --------------- | --------------------------------------------- |
+| Query object    | `<entity>Queries` (camelCase)                 |
+| Mutation object | `<entity>Mutations` (camelCase)               |
+| Query keys      | Must start with `_` prefix (e.g., `_getById`) |
+| Mutation keys   | Must start with `_` prefix (e.g., `_create`)  |
+| Table names     | snake_case, plural                            |
+| Column names    | snake_case                                    |
+
+### Function Naming Rule
+
+- All model query/mutation keys **must** start with an underscore (`_`) prefix
+- Examples: `_getById`, `_getAll`, `_create`, `_update`, `_delete`
+- This convention distinguishes raw SQL model functions from controller/service layer functions
 
 ## Checklist
 
