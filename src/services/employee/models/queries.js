@@ -2,21 +2,21 @@
  * Employee SQL Queries
  */
 export const employeeQueries = {
-  getById: `
+  _getById: `
     SELECT * FROM employees WHERE id = $1
   `,
 
-  getAll: `
+  _getAll: `
     SELECT * FROM employees 
     ORDER BY created_at DESC 
     LIMIT $1 OFFSET $2
   `,
 
-  countAll: `
+  _countAll: `
     SELECT COUNT(*) FROM employees
   `,
 
-  search: `
+  _search: `
     SELECT * FROM employees 
     WHERE 
       first_name ILIKE $1 OR 
@@ -27,7 +27,7 @@ export const employeeQueries = {
     LIMIT $2 OFFSET $3
   `,
 
-  countSearch: `
+  _countSearch: `
     SELECT COUNT(*) FROM employees 
     WHERE 
       first_name ILIKE $1 OR 
@@ -36,34 +36,46 @@ export const employeeQueries = {
       position ILIKE $1
   `,
 
-  getByTeam: `
+  _getByTeam: `
     SELECT * FROM employees 
     WHERE team_id = $1 
     ORDER BY created_at DESC 
     LIMIT $2 OFFSET $3
   `,
 
-  countByTeam: `
+  _countByTeam: `
     SELECT COUNT(*) FROM employees WHERE team_id = $1
   `,
 
-  getByDepartment: `
+  _getByDepartment: `
     SELECT * FROM employees 
     WHERE department = $1 
     ORDER BY created_at DESC 
     LIMIT $2 OFFSET $3
   `,
 
-  countByDepartment: `
+  _countByDepartment: `
     SELECT COUNT(*) FROM employees WHERE department = $1
   `,
 
-  getStats: `
+  _getStats: `
     SELECT 
       COUNT(*) as total_employees,
       COUNT(*) FILTER (WHERE is_active = true) as active_employees,
       COUNT(DISTINCT team_id) as total_teams,
       AVG(salary) as average_salary
     FROM employees
+  `,
+
+  _getByHireDateRange: `
+    SELECT * FROM employees 
+    WHERE hire_date BETWEEN $1 AND $2 
+    ORDER BY created_at DESC 
+    LIMIT $3 OFFSET $4
+  `,
+
+  countByHireDateRange: `
+    SELECT COUNT(*) FROM employees 
+    WHERE hire_date BETWEEN $1 AND $2
   `,
 };
