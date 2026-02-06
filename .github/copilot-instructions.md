@@ -11,6 +11,10 @@ This is a **GraphQL API** for Employee Team Management built with:
 - **PostgreSQL** with raw SQL via Knex
 - **DataLoader** for N+1 query optimization
 
+## Coding Standards
+Coding standards are defined per file type. Always follow the relevant rules:  
+- [Models](./instructions/models.instructions.md)  
+
 ## Architecture Patterns
 
 ### Service Layer Pattern
