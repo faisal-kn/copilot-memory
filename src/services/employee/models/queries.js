@@ -66,4 +66,12 @@ export const employeeQueries = {
       AVG(salary) as average_salary
     FROM employees
   `,
+
+  getByStatusAndSalaryRange: `
+    SELECT * FROM employees 
+    WHERE is_active = $3 
+      AND salary BETWEEN $4 AND $5
+    ORDER BY created_at DESC 
+    LIMIT $1 OFFSET $2
+  `,
 };
