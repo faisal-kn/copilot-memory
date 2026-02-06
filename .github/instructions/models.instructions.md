@@ -1,6 +1,7 @@
 ---
 description: "Best practices for implementing model SQL queries/mutations"
 applyTo: "**/models/**/*.js"
+excludeAgent: ["code-review"]
 ---
 
 ## Purpose
