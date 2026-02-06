@@ -66,4 +66,16 @@ export const employeeQueries = {
       AVG(salary) as average_salary
     FROM employees
   `,
+
+  _getByHireDateRange: `
+    SELECT * FROM employees 
+    WHERE hire_date BETWEEN $1 AND $2 
+    ORDER BY created_at DESC 
+    LIMIT $3 OFFSET $4
+  `,
+
+  countByHireDateRange: `
+    SELECT COUNT(*) FROM employees 
+    WHERE hire_date BETWEEN $1 AND $2
+  `,
 };
